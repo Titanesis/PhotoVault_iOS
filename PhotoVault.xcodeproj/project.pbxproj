@@ -21,7 +21,19 @@
 		1EEFC01921DCF01A003995E6 /* SQLite.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1EEFC00C21DCF00F003995E6 /* SQLite.framework */; };
 		1EEFC01A21DCF020003995E6 /* SQLite.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1EEFC00C21DCF00F003995E6 /* SQLite.framework */; };
 		1EEFC01B21DCF020003995E6 /* SQLite.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1EEFC00C21DCF00F003995E6 /* SQLite.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		1EEFC01F21DCF494003995E6 /* CollectionCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EEFC01E21DCF494003995E6 /* CollectionCollectionViewController.swift */; };
+		1EEFC02121DD222F003995E6 /* DbPersistance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EEFC02021DD222F003995E6 /* DbPersistance.swift */; };
+		1EEFC02521DE3D67003995E6 /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EEFC02421DE3D67003995E6 /* CollectionViewController.swift */; };
+		1EEFC02721DE6437003995E6 /* PhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EEFC02621DE6437003995E6 /* PhotoViewController.swift */; };
+		1EEFC02921DE81AF003995E6 /* EditPopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EEFC02821DE81AF003995E6 /* EditPopUpViewController.swift */; };
+		1EFD73F521DF7EC50043E695 /* PhotoPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EFD73F421DF7EC50043E695 /* PhotoPickerViewController.swift */; };
+		1EFD741C21E0ECC00043E695 /* KeychainSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1EFD740D21E0ECAC0043E695 /* KeychainSwift.framework */; };
+		1EFD741D21E0ECCC0043E695 /* KeychainSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1EFD740D21E0ECAC0043E695 /* KeychainSwift.framework */; };
+		1EFD741E21E0ECCC0043E695 /* KeychainSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1EFD740D21E0ECAC0043E695 /* KeychainSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		1EFD742221E0F04C0043E695 /* KeychainSwiftDistrib.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EFD742121E0F04C0043E695 /* KeychainSwiftDistrib.swift */; };
+		1EFD742421E108F70043E695 /* ResetPWViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EFD742321E108F60043E695 /* ResetPWViewController.swift */; };
+		1EFD742621E118BA0043E695 /* FirstRunViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EFD742521E118BA0043E695 /* FirstRunViewController.swift */; };
+		1EFD742821E35FF90043E695 /* RNCryptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EFD742721E35FF90043E695 /* RNCryptor.swift */; };
+		1EFD742D21E366F00043E695 /* Objective-CBridgingHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EFD742C21E366F00043E695 /* Objective-CBridgingHeader.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,6 +93,69 @@
 			remoteGlobalIDString = EE247AD21C3F04ED00AE3E12;
 			remoteInfo = "SQLite iOS";
 		};
+		1EFD740C21E0ECAC0043E695 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1EFD740021E0ECAC0043E695 /* KeychainSwift.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 7ED6C96C1B1C118F00FE8090;
+			remoteInfo = KeychainSwift;
+		};
+		1EFD740E21E0ECAC0043E695 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1EFD740021E0ECAC0043E695 /* KeychainSwift.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 232B4C7A1BC29950001F2B7A;
+			remoteInfo = "KeychainSwift-macOS";
+		};
+		1EFD741021E0ECAC0043E695 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1EFD740021E0ECAC0043E695 /* KeychainSwift.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 232B4C8A1BC29984001F2B7A;
+			remoteInfo = "KeychainSwift-watchOS";
+		};
+		1EFD741221E0ECAC0043E695 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1EFD740021E0ECAC0043E695 /* KeychainSwift.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 23E785601BDA410C00B7564A;
+			remoteInfo = "KeychainSwift-tvOS";
+		};
+		1EFD741421E0ECAC0043E695 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1EFD740021E0ECAC0043E695 /* KeychainSwift.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 7ED6C9771B1C118F00FE8090;
+			remoteInfo = KeychainSwiftTests;
+		};
+		1EFD741621E0ECAC0043E695 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1EFD740021E0ECAC0043E695 /* KeychainSwift.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 7ED6C99D1B1C133500FE8090;
+			remoteInfo = Demo;
+		};
+		1EFD741821E0ECAC0043E695 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1EFD740021E0ECAC0043E695 /* KeychainSwift.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 7E3A6B601D3F62C2007C5B1F;
+			remoteInfo = "macOS Tests";
+		};
+		1EFD741A21E0ECAC0043E695 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1EFD740021E0ECAC0043E695 /* KeychainSwift.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 7E3A6B7B1D3F6779007C5B1F;
+			remoteInfo = "macOS Demo";
+		};
+		1EFD741F21E0ECCC0043E695 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1EFD740021E0ECAC0043E695 /* KeychainSwift.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 7ED6C96B1B1C118F00FE8090;
+			remoteInfo = KeychainSwift;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -90,6 +165,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				1EFD741E21E0ECCC0043E695 /* KeychainSwift.framework in Embed Frameworks */,
 				1EEFC01B21DCF020003995E6 /* SQLite.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
@@ -112,7 +188,20 @@
 		1EAD05B121CBE98C00D4A3F4 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		1EAD05B321CC22C800D4A3F4 /* AlbumViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumViewController.swift; sourceTree = "<group>"; };
 		1EEFC00121DCF00F003995E6 /* SQLite.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SQLite.xcodeproj; path = "../../SQLite.swift-master/SQLite.xcodeproj"; sourceTree = "<group>"; };
-		1EEFC01E21DCF494003995E6 /* CollectionCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionCollectionViewController.swift; sourceTree = "<group>"; };
+		1EEFC02021DD222F003995E6 /* DbPersistance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DbPersistance.swift; sourceTree = "<group>"; };
+		1EEFC02421DE3D67003995E6 /* CollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
+		1EEFC02621DE6437003995E6 /* PhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoViewController.swift; sourceTree = "<group>"; };
+		1EEFC02821DE81AF003995E6 /* EditPopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditPopUpViewController.swift; sourceTree = "<group>"; };
+		1EFD73F421DF7EC50043E695 /* PhotoPickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoPickerViewController.swift; sourceTree = "<group>"; };
+		1EFD73FC21DFEB640043E695 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		1EFD740021E0ECAC0043E695 /* KeychainSwift.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = KeychainSwift.xcodeproj; path = "../../../Downloads/keychain-swift-master/KeychainSwift.xcodeproj"; sourceTree = "<group>"; };
+		1EFD742121E0F04C0043E695 /* KeychainSwiftDistrib.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeychainSwiftDistrib.swift; sourceTree = "<group>"; };
+		1EFD742321E108F60043E695 /* ResetPWViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPWViewController.swift; sourceTree = "<group>"; };
+		1EFD742521E118BA0043E695 /* FirstRunViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstRunViewController.swift; sourceTree = "<group>"; };
+		1EFD742721E35FF90043E695 /* RNCryptor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RNCryptor.swift; sourceTree = "<group>"; };
+		1EFD742921E364E20043E695 /* RNCryptor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = RNCryptor.h; path = "../../../Downloads/RNCryptor-master/Sources/Cryptor/include/RNCryptor.h"; sourceTree = "<group>"; };
+		1EFD742B21E366EF0043E695 /* PhotoVault-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PhotoVault-Bridging-Header.h"; sourceTree = "<group>"; };
+		1EFD742C21E366F00043E695 /* Objective-CBridgingHeader.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "Objective-CBridgingHeader.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +209,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1EFD741D21E0ECCC0043E695 /* KeychainSwift.framework in Frameworks */,
+				1EFD741C21E0ECC00043E695 /* KeychainSwift.framework in Frameworks */,
 				1EEFC01A21DCF020003995E6 /* SQLite.framework in Frameworks */,
 				1EEFC01921DCF01A003995E6 /* SQLite.framework in Frameworks */,
 			);
@@ -150,18 +241,30 @@
 			isa = PBXGroup;
 			children = (
 				1EAD057821CAB69100D4A3F4 /* AppDelegate.swift */,
+				1EFD742921E364E20043E695 /* RNCryptor.h */,
+				1EFD742721E35FF90043E695 /* RNCryptor.swift */,
 				1EAD057A21CAB69100D4A3F4 /* ViewController.swift */,
 				1EAD057C21CAB69100D4A3F4 /* Main.storyboard */,
+				1EFD742121E0F04C0043E695 /* KeychainSwiftDistrib.swift */,
 				1EAD05B121CBE98C00D4A3F4 /* DetailViewController.swift */,
 				1EAD05AB21CABBFF00D4A3F4 /* TableViewController.swift */,
 				1EAD057F21CAB69200D4A3F4 /* Assets.xcassets */,
+				1EFD740021E0ECAC0043E695 /* KeychainSwift.xcodeproj */,
 				1EEFC00121DCF00F003995E6 /* SQLite.xcodeproj */,
 				1EAD058121CAB69200D4A3F4 /* LaunchScreen.storyboard */,
 				1EAD058421CAB69200D4A3F4 /* Info.plist */,
 				1EAD05AD21CBD23800D4A3F4 /* Album.swift */,
 				1EAD05AF21CBE77700D4A3F4 /* Photo.swift */,
 				1EAD05B321CC22C800D4A3F4 /* AlbumViewController.swift */,
-				1EEFC01E21DCF494003995E6 /* CollectionCollectionViewController.swift */,
+				1EEFC02021DD222F003995E6 /* DbPersistance.swift */,
+				1EEFC02421DE3D67003995E6 /* CollectionViewController.swift */,
+				1EEFC02621DE6437003995E6 /* PhotoViewController.swift */,
+				1EEFC02821DE81AF003995E6 /* EditPopUpViewController.swift */,
+				1EFD73F421DF7EC50043E695 /* PhotoPickerViewController.swift */,
+				1EFD742321E108F60043E695 /* ResetPWViewController.swift */,
+				1EFD742521E118BA0043E695 /* FirstRunViewController.swift */,
+				1EFD742C21E366F00043E695 /* Objective-CBridgingHeader.m */,
+				1EFD742B21E366EF0043E695 /* PhotoVault-Bridging-Header.h */,
 			);
 			path = PhotoVault;
 			sourceTree = "<group>";
@@ -169,6 +272,7 @@
 		1EAD05A221CAB6A800D4A3F4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				1EFD73FC21DFEB640043E695 /* Security.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -183,6 +287,21 @@
 				1EEFC01421DCF00F003995E6 /* SQLite.framework */,
 				1EEFC01621DCF00F003995E6 /* SQLiteTests tvOS.xctest */,
 				1EEFC01821DCF00F003995E6 /* SQLite.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1EFD740121E0ECAC0043E695 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1EFD740D21E0ECAC0043E695 /* KeychainSwift.framework */,
+				1EFD740F21E0ECAC0043E695 /* KeychainSwift.framework */,
+				1EFD741121E0ECAC0043E695 /* KeychainSwift.framework */,
+				1EFD741321E0ECAC0043E695 /* KeychainSwift.framework */,
+				1EFD741521E0ECAC0043E695 /* KeychainSwiftTests.xctest */,
+				1EFD741721E0ECAC0043E695 /* Keychain Swift.app */,
+				1EFD741921E0ECAC0043E695 /* macOS Tests.xctest */,
+				1EFD741B21E0ECAC0043E695 /* macOS Demo.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -203,6 +322,7 @@
 			);
 			dependencies = (
 				1EEFC01D21DCF020003995E6 /* PBXTargetDependency */,
+				1EFD742021E0ECCC0043E695 /* PBXTargetDependency */,
 			);
 			name = PhotoVault;
 			productName = PhotoVault;
@@ -221,6 +341,7 @@
 				TargetAttributes = {
 					1EAD057421CAB69100D4A3F4 = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1010;
 					};
 				};
 			};
@@ -236,6 +357,10 @@
 			productRefGroup = 1EAD057621CAB69100D4A3F4 /* Products */;
 			projectDirPath = "";
 			projectReferences = (
+				{
+					ProductGroup = 1EFD740121E0ECAC0043E695 /* Products */;
+					ProjectRef = 1EFD740021E0ECAC0043E695 /* KeychainSwift.xcodeproj */;
+				},
 				{
 					ProductGroup = 1EEFC00221DCF00F003995E6 /* Products */;
 					ProjectRef = 1EEFC00121DCF00F003995E6 /* SQLite.xcodeproj */;
@@ -298,6 +423,62 @@
 			remoteRef = 1EEFC01721DCF00F003995E6 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
+		1EFD740D21E0ECAC0043E695 /* KeychainSwift.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = KeychainSwift.framework;
+			remoteRef = 1EFD740C21E0ECAC0043E695 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		1EFD740F21E0ECAC0043E695 /* KeychainSwift.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = KeychainSwift.framework;
+			remoteRef = 1EFD740E21E0ECAC0043E695 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		1EFD741121E0ECAC0043E695 /* KeychainSwift.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = KeychainSwift.framework;
+			remoteRef = 1EFD741021E0ECAC0043E695 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		1EFD741321E0ECAC0043E695 /* KeychainSwift.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = KeychainSwift.framework;
+			remoteRef = 1EFD741221E0ECAC0043E695 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		1EFD741521E0ECAC0043E695 /* KeychainSwiftTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = KeychainSwiftTests.xctest;
+			remoteRef = 1EFD741421E0ECAC0043E695 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		1EFD741721E0ECAC0043E695 /* Keychain Swift.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = "Keychain Swift.app";
+			remoteRef = 1EFD741621E0ECAC0043E695 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		1EFD741921E0ECAC0043E695 /* macOS Tests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "macOS Tests.xctest";
+			remoteRef = 1EFD741821E0ECAC0043E695 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		1EFD741B21E0ECAC0043E695 /* macOS Demo.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = "macOS Demo.app";
+			remoteRef = 1EFD741A21E0ECAC0043E695 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
 /* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
@@ -321,12 +502,21 @@
 			files = (
 				1EAD057B21CAB69100D4A3F4 /* ViewController.swift in Sources */,
 				1EAD05AC21CABBFF00D4A3F4 /* TableViewController.swift in Sources */,
-				1EEFC01F21DCF494003995E6 /* CollectionCollectionViewController.swift in Sources */,
+				1EFD742621E118BA0043E695 /* FirstRunViewController.swift in Sources */,
 				1EAD057921CAB69100D4A3F4 /* AppDelegate.swift in Sources */,
 				1EAD05B221CBE98C00D4A3F4 /* DetailViewController.swift in Sources */,
+				1EFD742D21E366F00043E695 /* Objective-CBridgingHeader.m in Sources */,
+				1EFD742421E108F70043E695 /* ResetPWViewController.swift in Sources */,
+				1EEFC02921DE81AF003995E6 /* EditPopUpViewController.swift in Sources */,
+				1EFD742821E35FF90043E695 /* RNCryptor.swift in Sources */,
+				1EEFC02721DE6437003995E6 /* PhotoViewController.swift in Sources */,
+				1EFD742221E0F04C0043E695 /* KeychainSwiftDistrib.swift in Sources */,
 				1EAD05AE21CBD23800D4A3F4 /* Album.swift in Sources */,
 				1EAD05B021CBE77800D4A3F4 /* Photo.swift in Sources */,
+				1EEFC02121DD222F003995E6 /* DbPersistance.swift in Sources */,
 				1EAD05B421CC22C800D4A3F4 /* AlbumViewController.swift in Sources */,
+				1EFD73F521DF7EC50043E695 /* PhotoPickerViewController.swift in Sources */,
+				1EEFC02521DE3D67003995E6 /* CollectionViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -337,6 +527,11 @@
 			isa = PBXTargetDependency;
 			name = "SQLite iOS";
 			targetProxy = 1EEFC01C21DCF020003995E6 /* PBXContainerItemProxy */;
+		};
+		1EFD742021E0ECCC0043E695 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = KeychainSwift;
+			targetProxy = 1EFD741F21E0ECCC0043E695 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -481,6 +676,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = PhotoVault/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -489,6 +685,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = fr.utt.fr.PhotoVault;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "PhotoVault/PhotoVault-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -499,6 +697,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = PhotoVault/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -507,6 +706,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = fr.utt.fr.PhotoVault;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "PhotoVault/PhotoVault-Bridging-Header.h";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

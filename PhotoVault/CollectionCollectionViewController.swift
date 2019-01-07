@@ -6,6 +6,7 @@
 //  Copyright © 2019 IF26. All rights reserved.
 //
 
+/*
 import UIKit
 import Photos
 
@@ -18,12 +19,14 @@ class CollectionCollectionViewController: UICollectionViewController, UICollecti
     
     @IBOutlet weak var cancelButton: UIBarButtonItem!
 
+    @IBOutlet weak var addButton: UIButton!
     @IBOutlet weak var albumNavBar: UINavigationItem!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.addButton.layer.cornerRadius = 25
         albumNavBar.title! = getName
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -141,3 +144,53 @@ class CollectionCollectionViewController: UICollectionViewController, UICollecti
     */
 
 }
+*/
+
+import UIKit
+
+private let reuseIdentifier = "Cell"
+
+class CollectionCollectionViewController: UICollectionViewController{
+    var cellColor = true
+    var getName = String()
+    
+    @IBOutlet weak var albumNavBar: UINavigationItem!
+    @IBOutlet weak var addButton: UIButton!
+    @IBOutlet weak var cancelButton: UIBarButtonItem!
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        self.collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
+        self.addButton.layer.cornerRadius = 25
+        albumNavBar.title! = getName
+    }
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+    }
+    
+    override func numberOfSections(in collectionView: UICollectionView) -> Int {
+        return 1
+    }
+    
+    override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int{
+        return 100
+    }
+    
+    
+    override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath)
+        
+        cell.backgroundColor = cellColor ? UIColor.red : UIColor.blue
+        cellColor = !cellColor
+        
+        return cell
+    }
+    
+    
+    @IBAction func cancelAction(_ sender: UIBarButtonItem) {
+        navigationController?.popViewController(animated: true)
+    }
+}
+

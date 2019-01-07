@@ -16,6 +16,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        isAppAlreadyLaunchedOnce()
         return true
     }
 
@@ -39,6 +40,37 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+    }
+    
+    func isAppAlreadyLaunchedOnce()->Bool{
+        let defaults = UserDefaults.standard
+        //defaults.string(forKey: "isAppAlreadyLaunchedOnce") ?? ""
+        //defaults.bool(forKey: "isAppAlreadyLaunchedOnce") ?? false
+        
+        if let isAppAlreadyLaunchedOnce = defaults.string(forKey: "isItFirstLaunch"){
+            print("App already launched : \(isAppAlreadyLaunchedOnce)")
+            self.window = UIWindow(frame: UIScreen.main.bounds)
+            
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            
+            let initialViewController = storyboard.instantiateViewController(withIdentifier: "ViewController") as! ViewController
+            
+            self.window?.rootViewController = initialViewController
+            self.window?.makeKeyAndVisible()
+            return true
+        }else{
+            defaults.set(true, forKey: "isItFirstLaunch")
+            print("App launched first time")
+            self.window = UIWindow(frame: UIScreen.main.bounds)
+            
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            
+            let initialViewController = storyboard.instantiateViewController(withIdentifier: "FirstRunViewController") as! FirstRunViewController
+            
+            self.window?.rootViewController = initialViewController
+            self.window?.makeKeyAndVisible()
+            return false
+        }
     }
 
 
